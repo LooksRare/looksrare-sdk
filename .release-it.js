@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // Doc: https://github.com/release-it/release-it
 module.exports = {
   git: {
@@ -9,6 +11,5 @@ module.exports = {
   },
   github: {
     release: true,
-    web: true,
   },
 };
