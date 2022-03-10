@@ -3,3 +3,4 @@ export { default as erc721Abi } from "./erc721.json";
 export { default as erc1155Abi } from "./erc1155.json";
 export { default as multicall2Abi } from "./multicall2.json";
 export { default as reverseRecordsAbi } from "./reverseRecords.json";
+export { default as transferSelectorNFTAbi } from "./transferSelectorNFT.json";
