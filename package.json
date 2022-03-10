@@ -12,6 +12,15 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
+  "keywords": [
+    "looksrare"
+  ],
+  "homepage": "https://looksrare.org/",
+  "bugs": "https://github.com/LooksRare/looksrare-sdk/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LooksRare/looksrare-sdk.git"
+  },
   "scripts": {
     "prebuild": "rm -rf ./dist",
     "prepublishOnly": "yarn build",
