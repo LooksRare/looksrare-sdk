@@ -25,6 +25,7 @@ export interface Addresses {
   TRANSFER_MANAGER_ERC721: string;
   TRANSFER_MANAGER_ERC1155: string;
   STRATEGY_STANDARD_SALE: string;
+  TRANSFER_SELECTOR_NFT: string;
   STRATEGY_COLLECTION_SALE: string;
   STRATEGY_PRIVATE_SALE: string;
   STRATEGY_DUTCH_AUCTION: string;
@@ -36,4 +37,5 @@ export interface Addresses {
   TRADING_REWARDS_DISTRIBUTOR: string;
   MULTICALL2: string;
   REVERSE_RECORDS: string;
+  AGGREGATOR_UNISWAP_V3: string;
 }
