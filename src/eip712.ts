@@ -3,6 +3,13 @@ import { SupportedChainId } from "./constants";
 
 const version = 1;
 
+/**
+ * Get LR typed data for creating maker orders.
+ * Use with a signTypedData function.
+ * @param chainId Current chain id
+ * @param verifyingContract Exchange contract address
+ * @returns { type: Record<string, TypedDataField[]>, domain: TypedDataDomain }
+ */
 export const getMakerOrderTypedData = (chainId: SupportedChainId, verifyingContract: string) => {
   const domain: TypedDataDomain = {
     name: "LooksRareExchange",
