@@ -12,6 +12,7 @@ export interface ChainInfo {
   osApiUrl: string;
   cdnUrl: string;
   rewardsSubgraphUrl: string;
+  cloudinaryUrl: string;
 }
 
 export interface Addresses {
