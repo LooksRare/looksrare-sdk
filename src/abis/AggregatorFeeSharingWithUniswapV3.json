@@ -3,16 +3,6 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_looksRareToken",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_rewardToken",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
         "name": "_feeSharingSystem",
         "type": "address"
       },
@@ -79,6 +69,19 @@
     "anonymous": false,
     "inputs": [],
     "name": "HarvestStop",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "harvestBufferBlocks",
+        "type": "uint256"
+      }
+    ],
+    "name": "NewHarvestBufferBlocks",
     "type": "event"
   },
   {
@@ -186,6 +189,19 @@
   },
   {
     "inputs": [],
+    "name": "MAXIMUM_HARVEST_BUFFER_BLOCKS",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "MINIMUM_DEPOSIT_LOOKS",
     "outputs": [
       {
@@ -263,6 +279,13 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "checkAndAdjustRewardTokenAllowanceIfRequired",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -290,9 +313,22 @@
   },
   {
     "inputs": [],
-    "name": "harvestAndSellToLOOKS",
+    "name": "harvestAndSellAndCompound",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "harvestBufferBlocks",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -469,6 +505,19 @@
   {
     "inputs": [],
     "name": "unpause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_newHarvestBufferBlocks",
+        "type": "uint256"
+      }
+    ],
+    "name": "updateHarvestBufferBlocks",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
