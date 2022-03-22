@@ -2,7 +2,7 @@
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/LooksRare/looksrare-sdk) ![GitHub](https://img.shields.io/github/license/LooksRare/looksrare-sdk) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/LooksRare/looksrare-sdk/Build)
 
-This SDK is a collection of tools used to interact with the Looksrare API and smart contracts.
+This SDK is a collection of tools used to interact with the LooksRare API and smart contracts.
 
 ## Usage
 
@@ -28,7 +28,7 @@ Typescript [types](https://github.com/LooksRare/looksrare-sdk/tree/master/src/ty
 
 ### ABIs
 
-The SDK exposes most of the Looksrare contract ABIs. For convenience, some commonly used ABIs are also exported.
+The SDK exposes most of the LooksRare contract ABIs. For convenience, some commonly used ABIs are also exported.
 If you need other ABIs, you can [open an issue](https://github.com/LooksRare/looksrare-sdk/issues/new?assignees=&labels=&template=feature_request.md&title=).
 
 ```ts
