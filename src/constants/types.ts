@@ -34,7 +34,6 @@ export interface Addresses {
   FEE_SHARING_SYSTEM: string;
   STAKING_POOL_FOR_LOOKS_LP: string;
   TOKEN_DISTRIBUTOR: string;
-  AIRDROP: string;
   TRADING_REWARDS_DISTRIBUTOR: string;
   MULTICALL2: string;
   REVERSE_RECORDS: string;
