@@ -47,7 +47,7 @@ const rinkebyAddresses: Addresses = {
   TRADING_REWARDS_DISTRIBUTOR: "0x8f1aB228E892Ad2a7E10605531C9EC23D5cbA4fD",
   MULTICALL2: "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696", // https://github.com/makerdao/multicall#multicall2-contract-addresses
   REVERSE_RECORDS: "0x196eC7109e127A353B709a20da25052617295F6f",
-  AGGREGATOR_UNISWAP_V3: "0xB6d18017d4fAc74B855F163bE36f2210b26A8A48",
+  AGGREGATOR_UNISWAP_V3: "0x5b5A702939bF53595dD0C14488528e05e1e8C4A5",
 };
 
 export const addressesByNetwork: Omit<{ [chainId in SupportedChainId]: Addresses }, SupportedChainId.HARDHAT> = {
