@@ -22,7 +22,7 @@ const mainnetAddresses: Addresses = {
   TRADING_REWARDS_DISTRIBUTOR: "0x453c1208B400fE47aCF275315F14E8F9F9fbC3cD",
   MULTICALL2: "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696", // https://github.com/makerdao/multicall#multicall2-contract-addresses
   REVERSE_RECORDS: "0x3671aE578E63FdF66ad4F3E12CC0c0d71Ac7510C",
-  AGGREGATOR_UNISWAP_V3: "",
+  AGGREGATOR_UNISWAP_V3: "0x3ab16Af1315dc6C95F83Cbf522fecF98D00fd9ba",
 };
 
 const rinkebyAddresses: Addresses = {
