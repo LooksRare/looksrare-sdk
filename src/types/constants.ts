@@ -6,6 +6,7 @@ export enum SupportedChainId {
 
 export interface ChainInfo {
   label: string;
+  appUrl: string;
   rpcUrl: string;
   explorer: string;
   apiUrl: string;
