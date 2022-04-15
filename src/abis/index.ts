@@ -6,6 +6,7 @@ export { default as FeeSharingSystemAbi } from "./FeeSharingSystem.json";
 export { default as IExecutionStrategyAbi } from "./IExecutionStrategy.json";
 export { default as LooksRareAirdropAbi } from "./LooksRareAirdrop.json";
 export { default as LooksRareExchangeAbi } from "./LooksRareExchange.json";
+export { default as MultiRewardsDistributorAbi } from "./MultiRewardsDistributor.json";
 export { default as PrivateSaleWithFeeSharingAbi } from "./PrivateSaleWithFeeSharing.json";
 export { default as ReverseRecordsAbi } from "./ReverseRecords.json";
 export { default as RoyaltyFeeManagerAbi } from "./RoyaltyFeeManager.json";
