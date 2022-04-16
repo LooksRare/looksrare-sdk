@@ -33,19 +33,25 @@ If you need other ABIs, you can [open an issue](https://github.com/LooksRare/loo
 
 ```ts
 import {
-  ERC20Abi,
-  ReverseRecordsAbi,
-  FeeSharingSystemAbi,
-  RoyaltyFeeSetterAbi,
-  TokenDistributorAbi,
-  LooksRareExchangeAbi,
-  RoyaltyFeeManagerAbi,
-  IExecutionStrategyAbi,
-  RoyaltyFeeRegistryAbi,
-  PrivateSaleWithFeeSharingAbi,
-  TradingRewardsDistributorAbi,
   AggregatorFeeSharingWithUniswapV3Abi,
+  ERC20Abi,
+  ERC721Abi,
+  ERC1155Abi,
+  FeeSharingSystemAbi,
+  IExecutionStrategyAbi,
+  LooksRareAirdropAbi,
+  LooksRareExchangeAbi,
+  MultiRewardsDistributorAbi,
+  PrivateSaleWithFeeSharingAbi,
+  ReverseRecordsAbi,
+  RoyaltyFeeManagerAbi,
+  RoyaltyFeeRegistryAbi,
+  RoyaltyFeeSetterAbi,
+  StakingPoolForUniswapV2TokensAbi,
+  TokenDistributorAbi,
+  TradingRewardsDistributorAbi,
   WETHAbi,
+  TransferSelectorNFTAbi,
 } from "@looksrare/sdk";
 ```
 
