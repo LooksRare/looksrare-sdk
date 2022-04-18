@@ -3,6 +3,7 @@ import { SupportedChainId, ChainInfo } from "../types/constants";
 export const CHAIN_INFO: { [chainId in SupportedChainId]: ChainInfo } = {
   [SupportedChainId.MAINNET]: {
     label: "Ethereum",
+    appUrl: "https://looksrare.org",
     explorer: "https://etherscan.io",
     rpcUrl: `https://eth-mainnet.alchemyapi.io/v2`,
     apiUrl: "https://api.looksrare.org/graphql",
@@ -13,6 +14,7 @@ export const CHAIN_INFO: { [chainId in SupportedChainId]: ChainInfo } = {
   },
   [SupportedChainId.RINKEBY]: {
     label: "Rinkeby",
+    appUrl: "https://rinkeby.looksrare.org",
     explorer: "https://rinkeby.etherscan.io",
     rpcUrl: `https://eth-rinkeby.alchemyapi.io/v2`,
     apiUrl: "https://api-rinkeby.looksrare.org/graphql",
@@ -23,6 +25,7 @@ export const CHAIN_INFO: { [chainId in SupportedChainId]: ChainInfo } = {
   },
   [SupportedChainId.HARDHAT]: {
     label: "Hardhat",
+    appUrl: "http://localhost:3000",
     explorer: "https://etherscan.io",
     rpcUrl: "http://127.0.0.1:8545",
     apiUrl: "http://localhost:4000/graphql",
