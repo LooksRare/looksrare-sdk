@@ -36,6 +36,7 @@ export interface Addresses {
   STAKING_POOL_FOR_LOOKS_LP: string;
   TOKEN_DISTRIBUTOR: string;
   TRADING_REWARDS_DISTRIBUTOR: string;
+  MULTI_REWARDS_DISTRIBUTOR: string;
   MULTICALL2: string;
   REVERSE_RECORDS: string;
   AGGREGATOR_UNISWAP_V3: string;
