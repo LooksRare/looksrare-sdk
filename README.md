@@ -55,6 +55,12 @@ import {
 } from "@looksrare/sdk";
 ```
 
+You can also export the JSON file directly:
+
+```js
+import wethAbi from "@looksrare/sdk/dist/abis/WETHAbi.json";
+```
+
 ### Constants
 
 #### Addresses
