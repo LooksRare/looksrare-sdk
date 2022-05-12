@@ -49,6 +49,7 @@ import { getMakerOrderTypedData, addressesByNetwork, SupportedChainId } from "@l
 const chainId = SupportedChainId.MAINNET;
 const addresses = addressesByNetwork[chainId];
 
+const signer = new ethers.Wallet(WALLET_PRIVATE_KEY);
 const { domain, type } = getMakerOrderTypedData(chainId, addresses.EXCHANGE);
 const signature = await signer._signTypedData(domain, type, makerOrder);
 ```
