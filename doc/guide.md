@@ -41,7 +41,7 @@ const makerOrder: MakerOrder = {
 const signatureHash = await signMakerOrder(signer, chainId, addresses.EXCHANGE, makerOrder, paramsTypes);
 ```
 
-If for any reason, the `signMakerOrder` doesn't fit your needs (i.e you only have access to an wallet, and not a json rpc provider), you can replace the `signMakerOrder` call by this:
+If for any reason, the `signMakerOrder` doesn't fit your needs (i.e you only have access to an wallet, and not a json rpc provider), you can replace the `signMakerOrder` call with this:
 
 ```ts
 import { getMakerOrderTypedData, addressesByNetwork, SupportedChainId } from "@looksrare/sdk";
