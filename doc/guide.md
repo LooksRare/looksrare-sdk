@@ -73,7 +73,7 @@ const [setter, receiver, fee]: [string, string, BigNumber] = await contract.roya
 
 ## What to do when the order is created and signed ?
 
-Use the public api entpoints [/orders](https://looksrare.github.io/api-docs/#/Orders/OrderController.createOrder) to push the order to the database. After what, the order will be visible by everyone using the API (looksrare.org, aggregators, etc..).
+Use the public api entpoints [/orders](https://looksrare.github.io/api-docs/#/Orders/OrderController.createOrder) to push the order to the database. After that, the order will be visible by everyone using the API (looksrare.org, aggregators, etc..).
 
 ## How to execute an order
 
