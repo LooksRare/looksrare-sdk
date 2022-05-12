@@ -6,7 +6,7 @@
 getMakerOrderTypedData(chainId, verifyingContract);
 ```
 
-Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domain` informations used to sign an order on LooksRare.
+Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domain` information used to sign an order on LooksRare.
 
 #### Params
 
