@@ -38,7 +38,7 @@ import wethAbi from "@looksrare/sdk/dist/abis/WETHAbi.json";
 - **TransferSelectorNFTAbi**: Select the right transfer manager based on the collection's supported interface. Used to transfer an NFT when a trade is executed.
 - **RoyaltyFeeRegistryAbi**: Royalty fee registry for the LooksRare exchange. Contains royalties information for all the collections.
 - **RoyaltyFeeSetterAbi**: Allow creators to set their royalties in the registry.
-- **RoyaltyFeeManagerAbi**: Compute the royalties for a specific trade, based on the registry informations.
+- **RoyaltyFeeManagerAbi**: Compute the royalties for a specific trade, based on the registry information.
 
 :octocat: [Contracts source code](https://github.com/LooksRare/contracts-exchange-v1)
 
