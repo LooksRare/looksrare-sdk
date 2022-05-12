@@ -10,7 +10,7 @@
 
 - [SDK Developer guide](guide.md)
 
-## Usefull links
+## Useful links
 
 - LooksRare developer documentation [:link:](https://docs.looksrare.org/developers/welcome)
 - LooksRare public API documentation [:link:](https://looksrare.github.io/api-docs)
