@@ -35,7 +35,7 @@ import wethAbi from "@looksrare/sdk/dist/abis/WETHAbi.json";
 
 - **LooksRareExchangeAbi**: LooksRare exchange, where all the trading actions are done (execute a trade, cancel orders, etc...).
 - **IExecutionStrategyAbi**: Generic interface for Strategies contracts. You can use it to interact with all the strategies (only the implementation changes).
-- **TransferSelectorNFTAbi**: Select the right transfer manager based on the collection supported interface. Used to transfer a NFT when a trade is executed.
+- **TransferSelectorNFTAbi**: Select the right transfer manager based on the collection's supported interface. Used to transfer an NFT when a trade is executed.
 - **RoyaltyFeeRegistryAbi**: Royalty fee registry for the LooksRare exchange. Contains the royalties informations for all the collections.
 - **RoyaltyFeeSetterAbi**: Allow creators to set their royalties in the registry.
 - **RoyaltyFeeManagerAbi**: Compute the royalties for a specific trade, based on the registry informations.
