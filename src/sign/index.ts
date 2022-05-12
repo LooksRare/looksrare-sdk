@@ -1,1 +1,2 @@
-export { getMakerOrderTypedData, signMakerOrder } from "./makerOrder";
+export { signMakerOrder } from "./signMakerOrder";
+export { getMakerOrderTypedData } from "./getMakerOrderTypedData";

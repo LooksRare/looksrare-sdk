@@ -1,4 +1,4 @@
-import { SupportedChainId, ChainInfo } from "../types/constants";
+import { ChainInfo, SupportedChainId } from "../types";
 
 export const CHAIN_INFO: { [chainId in SupportedChainId]: ChainInfo } = {
   [SupportedChainId.MAINNET]: {
