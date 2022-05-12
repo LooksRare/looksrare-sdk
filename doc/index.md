@@ -4,7 +4,7 @@
 
 - [Contract ABIs](abis.md)
 - [Constants (addresses, chains info)](constants.md)
-- [Signatures](signatures.md)
+- [Signatures](signature.md)
 
 ## Developer guides
 
