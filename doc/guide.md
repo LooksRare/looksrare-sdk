@@ -1,6 +1,6 @@
 # SDK Developer guide
 
-## How to create and sign and order
+## How to create and sign an order
 
 The `signMakerOrder` function is a helper used on LooksRare to trigger an EIP-712 signature on our supported wallets.
 
