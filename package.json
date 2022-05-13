@@ -44,6 +44,7 @@
     "@rollup/plugin-typescript": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
+    "dotenv": "^16.0.0",
     "eslint": "^8.10.0",
     "ethers": "^5.5.4",
     "husky": "^7.0.4",
@@ -53,8 +54,5 @@
     "rollup": "^2.69.0",
     "rollup-plugin-copy": "^3.4.0",
     "typescript": "^4.6.2"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.0"
   }
 }
