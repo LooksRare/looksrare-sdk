@@ -1,6 +1,4 @@
-import { BigNumberish } from "ethers";
-
-export type SolidityType = "bool" | "address" | "uint256" | "bytes" | "bytes32" | "bytes32[]";
+import { BigNumberish, BytesLike } from "ethers";
 
 /**
  * /!\ This type is used for the signature and should perfectly match the object signed by the user
@@ -20,4 +18,26 @@ export interface MakerOrder {
   endTime: BigNumberish; // endTime in timestamp
   minPercentageToAsk: BigNumberish;
   params: any[]; // params (e.g., price, target account for private sale)
+}
+
+/** MakerOrderWithSignature matches the type used for API order mutations and contract calls. */
+export interface MakerOrderWithSignature extends MakerOrder {
+  signature: string;
+}
+
+/** MakerOrderWithVRS match the type sent to the contract when executing a trade */
+export interface MakerOrderWithVRS extends Omit<MakerOrder, "params"> {
+  v: number;
+  r: string;
+  s: string;
+  params: BytesLike;
+}
+
+export interface TakerOrder {
+  isOrderAsk: boolean; // true --> ask / false --> bid
+  taker: string; // Taker address
+  price: BigNumberish; // price for the purchase
+  tokenId: BigNumberish;
+  minPercentageToAsk: BigNumberish;
+  params: any[]; // params (e.g., price)
 }
