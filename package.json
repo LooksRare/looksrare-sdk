@@ -28,6 +28,7 @@
     "dev": "rollup -c -w",
     "lint": "eslint --max-warnings 0 'src/**/*.{js,jsx,ts,tsx}'",
     "test": "jest",
+    "test:watch": "jest --watch",
     "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,json,yaml,yml,md}'",
     "format:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,yaml,yml,md}'",
     "release": "release-it --only-version --set-upstream"

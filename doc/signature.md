@@ -1,9 +1,25 @@
 # Signatures
 
+## encodeOrderParams
+
+```ts
+const { paramsTypes, encodedParams } = encodeOrderParams(params);
+```
+
+For a given array of params used to create a maker order, generate the corresponding array of param types, and encode the params in a data hex string.
+
+#### Params
+
+- **params (any[])**: The list of params used to create the maker order.
+
+#### Returns
+
+**({ paramsTypes, encodedParams })**: Params types array, and [encoded](https://docs.ethers.io/v5/api/utils/abi/coder/#AbiCoder-encode) params.
+
 ## getMakerOrderTypedData
 
 ```ts
-getMakerOrderTypedData(chainId, verifyingContract);
+const { domain, type } = getMakerOrderTypedData(chainId, verifyingContract);
 ```
 
 Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domain` information used to sign an order on LooksRare.
@@ -15,12 +31,12 @@ Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domai
 
 #### Returns
 
-**({ type, domain })**: type and domain used to sign the order.
+**({ type, domain })**: Type and domain used to sign the order.
 
 ## signMakerOrder
 
 ```ts
-await signMakerOrder(signer, chainId, verifyingContractAddress, order, paramsTypes);
+const signature = await signMakerOrder(signer, chainId, verifyingContractAddress, order, paramsTypes);
 ```
 
 #### Params

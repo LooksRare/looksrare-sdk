@@ -1,15 +1,15 @@
 import { getMakerOrderTypedData } from "./getMakerOrderTypedData";
 
-const zeroAddress = "0x0000000000000000000000000000000000000000";
+const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-describe("getMakerOrderTypedData.test", () => {
-  test("The domain is valid", () => {
-    const { domain } = getMakerOrderTypedData(1, zeroAddress);
+describe("getMakerOrderTypedData", () => {
+  it("has a valid domain", () => {
+    const { domain } = getMakerOrderTypedData(1, ZERO_ADDRESS);
     expect(domain).toEqual({
       name: "LooksRareExchange",
       version: "1",
       chainId: 1,
-      verifyingContract: zeroAddress,
+      verifyingContract: ZERO_ADDRESS,
     });
   });
 });

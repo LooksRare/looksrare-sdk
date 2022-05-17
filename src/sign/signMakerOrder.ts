@@ -1,7 +1,7 @@
 import { providers, utils } from "ethers";
 import { SupportedChainId, MakerOrder, SolidityType } from "../types";
 import { getMakerOrderTypedData } from "./getMakerOrderTypedData";
-import { etherSignTypedData } from "./helpers";
+import { etherSignTypedData } from "./etherSignTypedData";
 
 /**
  * Create a signature for a maker order
