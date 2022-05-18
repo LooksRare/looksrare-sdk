@@ -16,7 +16,6 @@ const nonce = await getUserNonce(signerAddress); // Fetch from the api
 
 const now = Math.floor(Date.now() / 1000);
 const paramsValue = [];
-const paramsTypes = [];
 
 // Get protocolFees and creatorFees from the contracts
 const netPriceRatio = BigNumber.from(10000).sub(protocolFees.add(creatorFees)).toNumber();
@@ -38,20 +37,20 @@ const makerOrder: MakerOrder = {
   minPercentageToAsk: Math.min(netPriceRatio, minNetPriceRatio),
   params: paramsValue,
 };
-const signatureHash = await signMakerOrder(signer, chainId, addresses.EXCHANGE, makerOrder, paramsTypes);
+const signatureHash = await signMakerOrder(signer, chainId, makerOrder);
 ```
 
 If for any reason, the `signMakerOrder` doesn't fit your needs (i.e you only have access to an wallet, and not a json rpc provider), you can replace the `signMakerOrder` call with this:
 
 ```ts
-import { getMakerOrderTypedData, addressesByNetwork, SupportedChainId } from "@looksrare/sdk";
+import { generateMakerOrderTypedData, addressesByNetwork, SupportedChainId } from "@looksrare/sdk";
 
 const chainId = SupportedChainId.MAINNET;
 const addresses = addressesByNetwork[chainId];
 
 const signer = new ethers.Wallet(WALLET_PRIVATE_KEY);
-const { domain, type } = getMakerOrderTypedData(chainId, addresses.EXCHANGE);
-const signature = await signer._signTypedData(domain, type, makerOrder);
+const { domain, value, type } = generateMakerOrderTypedData(signerAddress, chainId, makerOrder);
+const signature = await signer._signTypedData(domain, type, value);
 ```
 
 ## How to retrieve the user nonce

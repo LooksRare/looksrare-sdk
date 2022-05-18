@@ -1,11 +1,11 @@
-import { getMakerOrderTypedData } from "./getMakerOrderTypedData";
+import { getMakerOrderTypeAndDomain } from "./getMakerOrderTypeAndDomain";
 import { addressesByNetwork } from "../constants";
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-describe("getMakerOrderTypedData", () => {
+describe("getMakerOrderTypeAndDomain", () => {
   it("has a valid domain with verifyingContract", () => {
-    const { domain } = getMakerOrderTypedData(1, ZERO_ADDRESS);
+    const { domain } = getMakerOrderTypeAndDomain(1, ZERO_ADDRESS);
     expect(domain).toEqual({
       name: "LooksRareExchange",
       version: "1",
@@ -14,7 +14,7 @@ describe("getMakerOrderTypedData", () => {
     });
   });
   it("has a valid domain without verifyingContract (mainnet)", () => {
-    const { domain } = getMakerOrderTypedData(1);
+    const { domain } = getMakerOrderTypeAndDomain(1);
     expect(domain).toEqual({
       name: "LooksRareExchange",
       version: "1",
@@ -23,7 +23,7 @@ describe("getMakerOrderTypedData", () => {
     });
   });
   it("has a valid domain without verifyingContract (rinkeby)", () => {
-    const { domain } = getMakerOrderTypedData(4);
+    const { domain } = getMakerOrderTypeAndDomain(4);
     expect(domain).toEqual({
       name: "LooksRareExchange",
       version: "1",
