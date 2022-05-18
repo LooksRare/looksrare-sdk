@@ -12,7 +12,7 @@ const version = 1;
  * @param verifyingContract Exchange contract address
  * @returns { type: Record<string, TypedDataField[]>, domain: TypedDataDomain }
  */
-export const getMakerOrderTypedData = (
+export const getMakerOrderTypeAndDomain = (
   chainId: SupportedChainId,
   verifyingContract?: string
 ): {

@@ -16,10 +16,10 @@ For a given array of params used to create a maker order, generate the correspon
 
 **({ paramsTypes, encodedParams })**: Params types array, and [encoded](https://docs.ethers.io/v5/api/utils/abi/coder/#AbiCoder-encode) params.
 
-## getMakerOrderTypedData
+## getMakerOrderTypeAndDomain
 
 ```ts
-const { domain, type } = getMakerOrderTypedData(chainId, verifyingContract);
+const { domain, type } = getMakerOrderTypeAndDomain(chainId, verifyingContract);
 ```
 
 Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domain` information used to sign an order on LooksRare.
@@ -33,19 +33,33 @@ Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domai
 
 **({ type, domain })**: Type and domain used to sign the order.
 
+## generateMakerOrderTypedData
+
+```ts
+const { domain, value, type } = generateMakerOrderTypedData(signer, chainId, makerOrder, verifyingContract);
+```
+
+Generate the domain, value, and type used to generate an EIP-712 (typed data signing) signature.
+
+#### Params
+
+- **signer (string)**: The signer address.
+- **chainId ([SupportedChainId](https://github.com/LooksRare/looksrare-sdk/blob/master/src/types/enum.ts#L1))**: Chain ID of the blockchain where your application is running.
+- **makerOrder ([MakerOrder](https://github.com/LooksRare/looksrare-sdk/blob/master/src/types/orders.ts#L7))**: The maker order object.
+- **verifyingContract (string?)**: Contract address where the signature will be used. It will always be the LooksRareExchange address (EXCHANGE in the [addresses list](https://github.com/LooksRare/looksrare-sdk/blob/master/src/constants/addresses.ts#L10). The address differs based on the chain you are using). If you don't provide it, it will use the exchange address for the chainId you provided.
+
 ## signMakerOrder
 
 ```ts
-const signature = await signMakerOrder(signer, chainId, verifyingContractAddress, order, paramsTypes);
+const signature = await signMakerOrder(signer, chainId, order, verifyingContractAddress);
 ```
 
 #### Params
 
 - **signer (JsonRpcSigner)**: Json RPC signer object from [ethers](https://docs.ethers.io/v5/api/providers/jsonrpc-provider/#JsonRpcSigner).
 - **chainId ([SupportedChainId](https://github.com/LooksRare/looksrare-sdk/blob/master/src/types/enum.ts#L1))**: Chain ID of the blockchain where your application is running.
-- **verifyingContractAddress (string)**: Contract address where the signature will be used. It will always be the LooksRareExchange address (EXCHANGE in the [addresses list](https://github.com/LooksRare/looksrare-sdk/blob/master/src/constants/addresses.ts#L10). The address differs based on the chain you are using).
 - **order ([MakerOrder](https://github.com/LooksRare/looksrare-sdk/blob/master/src/types/sign.ts#L9))**:
-- **paramsTypes ([SolidityType[]](https://github.com/LooksRare/looksrare-sdk/blob/master/src/types/sign.ts#L3))**: Array of param types (empty array if there are no params).
+- **verifyingContractAddress (string)**: Contract address where the signature will be used. It will always be the LooksRareExchange address (EXCHANGE in the [addresses list](https://github.com/LooksRare/looksrare-sdk/blob/master/src/constants/addresses.ts#L10). The address differs based on the chain you are using). If you don't provide it, it will use the exchange address for the chainId you provided.
 
 #### Returns
 
