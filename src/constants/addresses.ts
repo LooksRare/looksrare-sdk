@@ -52,7 +52,8 @@ const rinkebyAddresses: Addresses = {
   AGGREGATOR_UNISWAP_V3: "0x5b5A702939bF53595dD0C14488528e05e1e8C4A5",
 };
 
-export const addressesByNetwork: Omit<{ [chainId in SupportedChainId]: Addresses }, SupportedChainId.HARDHAT> = {
+export const addressesByNetwork: { [chainId in SupportedChainId]: Addresses } = {
   [SupportedChainId.MAINNET]: mainnetAddresses,
   [SupportedChainId.RINKEBY]: rinkebyAddresses,
+  [SupportedChainId.HARDHAT]: rinkebyAddresses,
 };

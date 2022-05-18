@@ -1,5 +1,6 @@
 import { TypedDataDomain, TypedDataField } from "@ethersproject/abstract-signer";
 import { SupportedChainId } from "../types";
+import { addressesByNetwork } from "../constants";
 
 const version = 1;
 
@@ -13,7 +14,7 @@ const version = 1;
  */
 export const getMakerOrderTypedData = (
   chainId: SupportedChainId,
-  verifyingContract: string
+  verifyingContract?: string
 ): {
   type: Record<string, TypedDataField[]>;
   domain: TypedDataDomain;
@@ -22,7 +23,7 @@ export const getMakerOrderTypedData = (
     name: "LooksRareExchange",
     version: version.toString(),
     chainId,
-    verifyingContract,
+    verifyingContract: verifyingContract ? verifyingContract : addressesByNetwork[chainId].EXCHANGE,
   };
 
   const type: Record<string, Array<TypedDataField>> = {
