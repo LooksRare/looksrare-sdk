@@ -1,5 +1,5 @@
 import { providers, utils } from "ethers";
-import { SupportedChainId, MakerOrder, SolidityType } from "../types";
+import { SupportedChainId, MakerOrder, SolidityType, MakerOrderWithEncodedParams } from "../types";
 import { getMakerOrderTypedData } from "./getMakerOrderTypedData";
 import { etherSignTypedData } from "./etherSignTypedData";
 
@@ -22,19 +22,9 @@ export const signMakerOrder = async (
   const signerAddress = await signer.getAddress();
   const { domain, type } = getMakerOrderTypedData(chainId, verifyingContractAddress);
 
-  const value = {
-    isOrderAsk: order.isOrderAsk,
+  const value: MakerOrderWithEncodedParams = {
+    ...order,
     signer: signerAddress,
-    collection: order.collection,
-    price: order.price,
-    tokenId: order.tokenId,
-    amount: order.amount,
-    strategy: order.strategy,
-    currency: order.currency,
-    nonce: order.nonce,
-    startTime: order.startTime,
-    endTime: order.endTime,
-    minPercentageToAsk: order.minPercentageToAsk,
     params: utils.defaultAbiCoder.encode(paramsTypes, order.params),
   };
 
