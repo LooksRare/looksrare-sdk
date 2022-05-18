@@ -27,7 +27,7 @@ Generate the [EIP-712](https://eips.ethereum.org/EIPS/eip-712) `type` and `domai
 #### Params
 
 - **chainId ([SupportedChainId](https://github.com/LooksRare/looksrare-sdk/blob/master/src/types/enum.ts#L1))**: Chain ID of the blockchain where your application is running.
-- **verifyingContract (string)**: Contract address where the signature will be used. It will always be the LooksRareExchange address (EXCHANGE in the [addresses list](https://github.com/LooksRare/looksrare-sdk/blob/master/src/constants/addresses.ts#L10). The address differs based on the chain you are using).
+- **verifyingContract (string?)**: Contract address where the signature will be used. It will always be the LooksRareExchange address (EXCHANGE in the [addresses list](https://github.com/LooksRare/looksrare-sdk/blob/master/src/constants/addresses.ts#L10). The address differs based on the chain you are using). If you don't provide it, it will use the exchange address for the chainId you provided.
 
 #### Returns
 
