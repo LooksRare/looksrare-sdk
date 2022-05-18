@@ -1,6 +1,7 @@
-import { providers, utils } from "ethers";
-import { SupportedChainId, MakerOrder, SolidityType, MakerOrderWithEncodedParams } from "../types";
+import { providers } from "ethers";
+import { SupportedChainId, MakerOrder, MakerOrderWithEncodedParams } from "../types";
 import { getMakerOrderTypedData } from "./getMakerOrderTypedData";
+import { encodeOrderParams } from "./encodeOrderParams";
 import { etherSignTypedData } from "./etherSignTypedData";
 
 /**
@@ -15,17 +16,17 @@ import { etherSignTypedData } from "./etherSignTypedData";
 export const signMakerOrder = async (
   signer: providers.JsonRpcSigner,
   chainId: SupportedChainId,
-  verifyingContractAddress: string,
   order: MakerOrder,
-  paramsTypes: SolidityType[]
+  verifyingContractAddress?: string
 ): Promise<string> => {
   const signerAddress = await signer.getAddress();
   const { domain, type } = getMakerOrderTypedData(chainId, verifyingContractAddress);
+  const { encodedParams } = encodeOrderParams(order.params);
 
   const value: MakerOrderWithEncodedParams = {
     ...order,
     signer: signerAddress,
-    params: utils.defaultAbiCoder.encode(paramsTypes, order.params),
+    params: encodedParams,
   };
 
   const signatureHash = await etherSignTypedData(signer.provider, signerAddress, domain, type, value);
