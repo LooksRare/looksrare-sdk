@@ -8,6 +8,11 @@ const BOOL: SolidityType = "bool";
 const UINT: SolidityType = "uint256";
 
 describe("encodeOrderParams", () => {
+  it("no params", () => {
+    const { paramsTypes, encodedParams } = encodeOrderParams();
+    expect(paramsTypes).toEqual([]);
+    expect(encodedParams).toEqual("0x");
+  });
   it("empty params", () => {
     const { paramsTypes, encodedParams } = encodeOrderParams([]);
     expect(paramsTypes).toEqual([]);
