@@ -7,7 +7,7 @@ import { SolidityType } from "../types";
  * @param params array of params
  * @returns param types and encoded params
  */
-export const encodeOrderParams = (params: any[]): { paramsTypes: SolidityType[]; encodedParams: BytesLike } => {
+export const encodeOrderParams = (params: any[] = []): { paramsTypes: SolidityType[]; encodedParams: BytesLike } => {
   const paramsTypes: SolidityType[] = params.map((param): SolidityType => {
     if (utils.isAddress(param)) {
       return "address";
