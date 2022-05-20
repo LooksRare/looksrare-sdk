@@ -7,8 +7,9 @@ import { SolidityType } from "../types";
  * @param params array of params
  * @returns param types and encoded params
  */
-export const encodeOrderParams = (params: any[] = []): { paramsTypes: SolidityType[]; encodedParams: BytesLike } => {
-  const paramsTypes: SolidityType[] = params.map((param): SolidityType => {
+export const encodeOrderParams = (params?: any[] | null): { paramsTypes: SolidityType[]; encodedParams: BytesLike } => {
+  const nonNullParams = params || [];
+  const paramsTypes: SolidityType[] = nonNullParams.map((param): SolidityType => {
     if (utils.isAddress(param)) {
       return "address";
     }
@@ -25,5 +26,5 @@ export const encodeOrderParams = (params: any[] = []): { paramsTypes: SolidityTy
     }
   });
 
-  return { paramsTypes, encodedParams: utils.defaultAbiCoder.encode(paramsTypes, params) };
+  return { paramsTypes, encodedParams: utils.defaultAbiCoder.encode(paramsTypes, nonNullParams) };
 };

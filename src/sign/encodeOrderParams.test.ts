@@ -13,6 +13,11 @@ describe("encodeOrderParams", () => {
     expect(paramsTypes).toEqual([]);
     expect(encodedParams).toEqual("0x");
   });
+  it("null params", () => {
+    const { paramsTypes, encodedParams } = encodeOrderParams(null);
+    expect(paramsTypes).toEqual([]);
+    expect(encodedParams).toEqual("0x");
+  });
   it("empty params", () => {
     const { paramsTypes, encodedParams } = encodeOrderParams([]);
     expect(paramsTypes).toEqual([]);
