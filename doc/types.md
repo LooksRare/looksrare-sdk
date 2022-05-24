@@ -15,21 +15,21 @@ SupportedChainId.HARDHAT; // 31337;
 const makerOrder: MakerOrder = {
   // true --> ask / false --> bid
   isOrderAsk,
-  // signer address of the maker order
+  // Signer address of the maker order
   signer,
-  // collection address
+  // Collection address
   collection,
   // Price in WEI
   price,
   // Token ID (0 for collection orders)
   tokenId,
-  // amount of tokens to sell/purchase (must be 1 for ERC721, 1+ for ERC1155)
+  // Amount of tokens to sell/purchase (must be 1 for ERC721, 1+ for ERC1155)
   amount,
-  // strategy for trade execution (e.g., DutchAuction, StandardSaleForFixedPrice), see addresses in the SDK
+  // Strategy for trade execution (e.g., DutchAuction, StandardSaleForFixedPrice), see addresses in the SDK
   strategy,
-  // currency address (WETH)
+  // Currency address (WETH)
   currency,
-  // order nonce (must be unique unless new maker order is meant to override existing one e.g., lower ask price)
+  // Order nonce (must be unique unless new maker order is meant to override existing one e.g., lower ask price)
   nonce,
   // Start time timestamp in seconds (when the order starts to be valid)
   startTime,
@@ -40,5 +40,24 @@ const makerOrder: MakerOrder = {
   minPercentageToAsk: BigNumber.from(10000).sub(protocolFees.add(creatorFees)).toNumber(),
   // params (e.g., price, target account for private sale)
   params: [],
+};
+```
+
+## TakerOrder
+
+```ts
+const takerOrder: TakerOrder = {
+  // true --> ask / false --> bid
+  isOrderAsk,
+  // Taker address
+  taker,
+  // Price in WEI
+  price,
+  // Token ID
+  tokenId,
+  // Minimum ratio to be received by the seller (per 10000).
+  minPercentageToAsk,
+  // params (e.g., price, target account for private sale)
+  params,
 };
 ```
