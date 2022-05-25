@@ -1,5 +1,7 @@
 # Types
 
+The best way to understand types is to look at the [code](https://github.com/LooksRare/looksrare-sdk/tree/master/src/types) directly. However, here is some documentation about the main types.
+
 ## SupportedChainId
 
 ```ts

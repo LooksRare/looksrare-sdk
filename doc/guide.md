@@ -77,6 +77,29 @@ Use the public api entpoints [/orders](https://looksrare.github.io/api-docs/#/Or
 
 ## How to execute an order
 
-:warning: _This section is still incomplete, and more documentation will be added soon_ :warning:
+The api provides you with a `MakerOrderWithSignature`, and the contract expect a `MakerOrderWithVRS` and a `TakerOrder`.
+Below is an example about how to build them.
 
-Use the exchange functions [matchAskWithTakerBid](https://github.com/LooksRare/looksrare-sdk/blob/master/src/abis/LooksRareExchange.json#L555) or [matchAskWithTakerBidUsingETHAndWETH](https://github.com/LooksRare/looksrare-sdk/blob/master/src/abis/LooksRareExchange.json#L687)
+```ts
+const { encodedParams } = encodeOrderParams(makerOrderWithSinature.params);
+const vrs = ethers.utils.splitSignature(makerOrderWithSinature.signature);
+
+const askWithoutHash: MakerOrderWithVRS = {
+  ...makerOrderWithSinature,
+  ...vrs,
+  params: encodedParams,
+};
+
+const order: TakerOrder = {
+  isOrderAsk: false,
+  taker: account,
+  price: makerOrderWithSinature.price,
+  tokenId: makerOrderWithSinature.tokenId,
+  minPercentageToAsk: 8500,
+  params: encodedParams,
+};
+```
+
+- [matchAskWithTakerBid](https://docs.looksrare.org/developers/exchange/LooksRareExchange#matchaskwithtakerbid)
+- [matchAskWithTakerBidUsingETHAndWETH](https://docs.looksrare.org/developers/exchange/LooksRareExchange#matchaskwithtakerbidusingethandweth)
+- [matchBidWithTakerAsk](https://docs.looksrare.org/developers/exchange/LooksRareExchange#matchbidwithtakerask)
