@@ -34,7 +34,7 @@ const makerOrder: MakerOrder = {
   nonce: nonce.toNumber(),
   startTime: now,
   endTime: now + 86400, // 1 day validity
-  minPercentageToAsk: Math.min(netPriceRatio, minNetPriceRatio),
+  minPercentageToAsk: Math.max(netPriceRatio, minNetPriceRatio),
   params: paramsValue,
 };
 const signatureHash = await signMakerOrder(signer, chainId, makerOrder);
