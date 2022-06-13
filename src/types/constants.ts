@@ -34,4 +34,5 @@ export interface Addresses {
   MULTICALL2: string;
   REVERSE_RECORDS: string;
   AGGREGATOR_UNISWAP_V3: string;
+  EXECUTION_MANAGER: string;
 }
