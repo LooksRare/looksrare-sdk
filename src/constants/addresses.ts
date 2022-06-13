@@ -24,7 +24,7 @@ const mainnetAddresses: Addresses = {
   MULTICALL2: "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696", // https://github.com/makerdao/multicall#multicall2-contract-addresses
   REVERSE_RECORDS: "0x3671aE578E63FdF66ad4F3E12CC0c0d71Ac7510C",
   AGGREGATOR_UNISWAP_V3: "0x3ab16Af1315dc6C95F83Cbf522fecF98D00fd9ba",
-  EXECUTION_MANAGER: "0x9Cc58bf22a173C0Fa8791c13Df396d18185d62b2"
+  EXECUTION_MANAGER: "0x9Cc58bf22a173C0Fa8791c13Df396d18185d62b2",
 };
 
 const rinkebyAddresses: Addresses = {
@@ -51,7 +51,7 @@ const rinkebyAddresses: Addresses = {
   MULTICALL2: "0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696", // https://github.com/makerdao/multicall#multicall2-contract-addresses
   REVERSE_RECORDS: "0x196eC7109e127A353B709a20da25052617295F6f",
   AGGREGATOR_UNISWAP_V3: "0x5b5A702939bF53595dD0C14488528e05e1e8C4A5",
-  EXECUTION_MANAGER: "0x5d0cf3A51911Eb2a325a1D51cEbD3ee96f5cE5c4"
+  EXECUTION_MANAGER: "0x5d0cf3A51911Eb2a325a1D51cEbD3ee96f5cE5c4",
 };
 
 export const addressesByNetwork: { [chainId in SupportedChainId]: Addresses } = {
