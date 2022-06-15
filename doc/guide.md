@@ -19,8 +19,8 @@ const paramsValue = [];
 
 // Get protocolFees and creatorFees from the contracts
 const netPriceRatio = BigNumber.from(10000).sub(protocolFees.add(creatorFees)).toNumber();
-// This variable is used to enforce a max slippage of 15% on all orders, if a collection change the fees to be >15%, the order will become invalid
-const minNetPriceRatio = 8500;
+// This variable is used to enforce a max slippage of 25% on all orders, if a collection change the fees to be >25%, the order will become invalid
+const minNetPriceRatio = 7500;
 
 const makerOrder: MakerOrder = {
   isOrderAsk: true,
@@ -95,7 +95,7 @@ const order: TakerOrder = {
   taker: account,
   price: makerOrderWithSinature.price,
   tokenId: makerOrderWithSinature.tokenId,
-  minPercentageToAsk: 8500,
+  minPercentageToAsk: 7500,
   params: encodedParams,
 };
 ```

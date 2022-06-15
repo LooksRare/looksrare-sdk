@@ -38,7 +38,7 @@ const makerOrder: MakerOrder = {
   // End time timestamp in seconds (when the order becomes invalid)
   endTime,
   // Minimum ratio to be received by the user (per 10000).
-  // We encourage you to never go below 8500. You can use something like Math.min(netPriceRatio, 8500),
+  // We encourage you to never go below 7500. You can use something like Math.min(netPriceRatio, 7500),
   minPercentageToAsk: BigNumber.from(10000).sub(protocolFees.add(creatorFees)).toNumber(),
   // params (e.g., price, target account for private sale)
   params: [],
