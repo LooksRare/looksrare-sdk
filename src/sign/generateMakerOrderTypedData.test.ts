@@ -16,7 +16,7 @@ const ORDER: MakerOrder = {
   nonce: "100",
   startTime: Math.floor(Date.now() / 1000),
   endTime: Math.floor(Date.now() / 1000) + 86400,
-  minPercentageToAsk: 8500,
+  minPercentageToAsk: 7500,
   params: [],
 };
 
