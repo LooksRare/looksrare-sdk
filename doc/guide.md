@@ -81,11 +81,11 @@ The api provides you with a `MakerOrderWithSignature`, and the contract expect a
 Below is an example about how to build them.
 
 ```ts
-const { encodedParams } = encodeOrderParams(makerOrderWithSinature.params);
-const vrs = ethers.utils.splitSignature(makerOrderWithSinature.signature);
+const { encodedParams } = encodeOrderParams(makerOrderWithSignature.params);
+const vrs = ethers.utils.splitSignature(makerOrderWithSignature.signature);
 
 const askWithoutHash: MakerOrderWithVRS = {
-  ...makerOrderWithSinature,
+  ...makerOrderWithSignature,
   ...vrs,
   params: encodedParams,
 };
@@ -93,8 +93,8 @@ const askWithoutHash: MakerOrderWithVRS = {
 const order: TakerOrder = {
   isOrderAsk: false,
   taker: account,
-  price: makerOrderWithSinature.price,
-  tokenId: makerOrderWithSinature.tokenId,
+  price: makerOrderWithSignature.price,
+  tokenId: makerOrderWithSignature.tokenId,
   minPercentageToAsk: 7500,
   params: encodedParams,
 };
