@@ -2,6 +2,7 @@ export { default as AggregatorFeeSharingWithUniswapV3Abi } from "./AggregatorFee
 export { default as ERC20Abi } from "./ERC20.json";
 export { default as ERC721Abi } from "./ERC721.json";
 export { default as ERC1155Abi } from "./ERC1155.json";
+export { default as ExecutionManagerAbi } from "./ExecutionManager.json";
 export { default as FeeSharingSystemAbi } from "./FeeSharingSystem.json";
 export { default as IExecutionStrategyAbi } from "./IExecutionStrategy.json";
 export { default as LooksRareAirdropAbi } from "./LooksRareAirdrop.json";
