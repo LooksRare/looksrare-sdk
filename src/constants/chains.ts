@@ -23,6 +23,17 @@ export const CHAIN_INFO: { [chainId in SupportedChainId]: ChainInfo } = {
     rewardsSubgraphUrl: "https://api.thegraph.com/subgraphs/name/0xjurassicpunk/looks-distribution",
     cloudinaryUrl: "https://looksrare.mo.cloudinary.net/rinkeby",
   },
+  [SupportedChainId.GOERLI]: {
+    label: "Goerli",
+    appUrl: "https://goerli.looksrare.org",
+    explorer: "https://goerli.etherscan.io",
+    rpcUrl: `https://eth-goerli.alchemyapi.io/v2`,
+    apiUrl: "https://graphql-goerli.looksrare.org/graphql",
+    osApiUrl: "https://testnets-api.opensea.io",
+    cdnUrl: "https://static-goerli.looksnice.org",
+    rewardsSubgraphUrl: "https://api.thegraph.com/subgraphs/name/0xjurassicpunk/looks-distribution",
+    cloudinaryUrl: "https://looksrare.mo.cloudinary.net/goerli",
+  },
   [SupportedChainId.HARDHAT]: {
     label: "Hardhat",
     appUrl: "http://localhost:3000",
