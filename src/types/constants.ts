@@ -35,4 +35,5 @@ export interface Addresses {
   REVERSE_RECORDS: string;
   AGGREGATOR_UNISWAP_V3: string;
   EXECUTION_MANAGER: string;
+  CURRENCY_MANAGER: string;
 }
