@@ -17,7 +17,12 @@ export interface Call {
  * @param abi abi generated from the contract code
  * @param calls Array of Call objects to run through multicall
  */
-export const multicall = async <T = unknown>(provider: providers.Provider, address: string, abi: any[], calls: Call[]): Promise<T[]> => {
+export const multicall = async <T extends any[]>(
+  provider: providers.Provider,
+  address: string,
+  abi: any[],
+  calls: Call[]
+): Promise<T> => {
   // Setup contracts
   const multicallContract = new Contract(address, multicall2Abi, provider);
   const itf = new Interface(abi);
@@ -35,7 +40,7 @@ export const multicall = async <T = unknown>(provider: providers.Provider, addre
   // will include all values positionally and if the ABI
   // included names, values will additionally be available
   // by their name.
-  const results: T[] = returnData.map((data: BytesLike, i: number) => {
+  const results: T = returnData.map((data: BytesLike, i: number) => {
     const [result] = itf.decodeFunctionResult(calls[i].functionName, data);
 
     return result;
