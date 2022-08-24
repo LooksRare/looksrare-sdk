@@ -14,7 +14,7 @@ enum Wallet {
  */
 interface ExtendedJsonRpcProvider extends ethers.providers.JsonRpcProvider {
   provider?: {
-    isFrame?: boolean;
+    isFrame?: boolean; // Frame injected wallet
   };
 }
 
