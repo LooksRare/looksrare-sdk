@@ -41,7 +41,7 @@ export const multicall = async <T extends any[]>(
   // included names, values will additionally be available
   // by their name.
   const results: T = returnData.map((data: BytesLike, i: number) => {
-    const [result] = itf.decodeFunctionResult(calls[i].functionName, data);
+    const result = itf.decodeFunctionResult(calls[i].functionName, data);
 
     return result;
   });
