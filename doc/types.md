@@ -7,7 +7,7 @@ The best way to understand types is to look at the [code](https://github.com/Loo
 ```ts
 import { SupportedChainId } from "@looksrare/sdk";
 SupportedChainId.MAINNET; // 1;
-SupportedChainId.RINKEBY; // 4;
+SupportedChainId.GOERLI; // 5;
 SupportedChainId.HARDHAT; // 31337;
 ```
 
