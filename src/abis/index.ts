@@ -10,7 +10,7 @@ export { default as LooksRareAirdropAbi } from "./LooksRareAirdrop.json";
 export { default as LooksRareExchangeAbi } from "./LooksRareExchange.json";
 export { default as Multicall2Abi } from "./Multicall2.json";
 export { default as MultiRewardsDistributorAbi } from "./MultiRewardsDistributor.json";
-export { default as OrderValidatorV1 } from "./OrderValidatorV1.json";
+export { default as OrderValidatorV1Abi } from "./OrderValidatorV1.json";
 export { default as PrivateSaleWithFeeSharingAbi } from "./PrivateSaleWithFeeSharing.json";
 export { default as ReverseRecordsAbi } from "./ReverseRecords.json";
 export { default as RoyaltyFeeManagerAbi } from "./RoyaltyFeeManager.json";
