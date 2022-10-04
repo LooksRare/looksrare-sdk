@@ -22,13 +22,13 @@ describe("getMakerOrderTypeAndDomain", () => {
       verifyingContract: addressesByNetwork[1].EXCHANGE,
     });
   });
-  it("has a valid domain without verifyingContract (rinkeby)", () => {
-    const { domain } = getMakerOrderTypeAndDomain(4);
+  it("has a valid domain without verifyingContract (goerli)", () => {
+    const { domain } = getMakerOrderTypeAndDomain(5);
     expect(domain).toEqual({
       name: "LooksRareExchange",
       version: "1",
-      chainId: 4,
-      verifyingContract: addressesByNetwork[4].EXCHANGE,
+      chainId: 5,
+      verifyingContract: addressesByNetwork[5].EXCHANGE,
     });
   });
 });
