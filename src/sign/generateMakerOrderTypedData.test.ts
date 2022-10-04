@@ -32,12 +32,12 @@ describe("generateMakerOrderTypedData", () => {
     expect(value).toEqual({ ...ORDER, params: "0x" });
   });
   it("generate typed data without a contract address", () => {
-    const { domain, value } = generateMakerOrderTypedData(SIGNER_ADDRESS, 4, ORDER);
+    const { domain, value } = generateMakerOrderTypedData(SIGNER_ADDRESS, 5, ORDER);
     expect(domain).toEqual({
       name: "LooksRareExchange",
       version: "1",
-      chainId: 4,
-      verifyingContract: addressesByNetwork[4].EXCHANGE,
+      chainId: 5,
+      verifyingContract: addressesByNetwork[5].EXCHANGE,
     });
     expect(value).toEqual({ ...ORDER, params: "0x" });
   });
