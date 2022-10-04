@@ -1,4 +1,4 @@
-import { SupportedChainId, Addresses } from "../types";
+import { Addresses, SupportedChainId } from "../types";
 
 const mainnetAddresses: Addresses = {
   LOOKS: "0xf4d2888d29D722226FafA5d9B24F9164c092421E",
@@ -26,6 +26,7 @@ const mainnetAddresses: Addresses = {
   AGGREGATOR_UNISWAP_V3: "0x3ab16Af1315dc6C95F83Cbf522fecF98D00fd9ba",
   EXECUTION_MANAGER: "0x9Cc58bf22a173C0Fa8791c13Df396d18185d62b2",
   CURRENCY_MANAGER: "0xC881ADdf409eE2C4b6bBc8B607c2C5CAFaB93d25",
+  ORDER_VALIDATOR_V1: "",
 };
 
 const goerliAddresses: Addresses = {
@@ -54,6 +55,7 @@ const goerliAddresses: Addresses = {
   AGGREGATOR_UNISWAP_V3: "0x63c38B3BE3eF075a00a5edaeC36F499088c7334C",
   EXECUTION_MANAGER: "0x972B3A1A89ABb5e489163345E3C44Ab1bB813986",
   CURRENCY_MANAGER: "0xAC56740Fa471C0266B59B101C76Ab771f199F2eA",
+  ORDER_VALIDATOR_V1: "0xabF651082Edb60C8Fc0e0fCa12CD27170B2a0e1d",
 };
 
 export const addressesByNetwork: { [chainId in SupportedChainId]: Addresses } = {

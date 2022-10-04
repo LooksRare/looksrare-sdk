@@ -36,4 +36,5 @@ export interface Addresses {
   AGGREGATOR_UNISWAP_V3: string;
   EXECUTION_MANAGER: string;
   CURRENCY_MANAGER: string;
+  ORDER_VALIDATOR_V1: string;
 }
