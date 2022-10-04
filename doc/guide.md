@@ -49,6 +49,7 @@ const chainId = SupportedChainId.MAINNET;
 const addresses = addressesByNetwork[chainId];
 
 const signer = new ethers.Wallet(WALLET_PRIVATE_KEY);
+const signerAddress = await signer.getAddress();
 const { domain, value, type } = generateMakerOrderTypedData(signerAddress, chainId, makerOrder);
 const signature = await signer._signTypedData(domain, type, value);
 ```
