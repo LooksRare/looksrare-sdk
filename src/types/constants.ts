@@ -1,4 +1,4 @@
-import { OrderValidatorCodeMap } from "../constants";
+import { OrderValidatorV1Enum } from "./enum";
 
 export interface ChainInfo {
   label: string;
@@ -41,7 +41,4 @@ export interface Addresses {
   ORDER_VALIDATOR_V1: string;
 }
 
-/**
- * https://github.com/LooksRare/contracts-exchange-v1/blob/master/contracts/orderValidation/ValidationCodes.md
- */
-export type OrderValidatorCode = keyof typeof OrderValidatorCodeMap;
+export type OrderValidatorV1Status = keyof typeof OrderValidatorV1Enum;
