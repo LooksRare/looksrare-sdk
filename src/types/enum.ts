@@ -39,3 +39,5 @@ export enum OrderValidatorV1Enum {
   ERC1155_IS_APPROVED_FOR_ALL_DOES_NOT_EXIST = 733,
   ERC1155_NO_APPROVAL_FOR_ALL = 734,
 }
+
+export type OrderValidatorV1Status = keyof typeof OrderValidatorV1Enum;

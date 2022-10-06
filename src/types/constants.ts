@@ -1,5 +1,3 @@
-import { OrderValidatorV1Enum } from "./enum";
-
 export interface ChainInfo {
   label: string;
   appUrl: string;
@@ -40,5 +38,3 @@ export interface Addresses {
   CURRENCY_MANAGER: string;
   ORDER_VALIDATOR_V1: string;
 }
-
-export type OrderValidatorV1Status = keyof typeof OrderValidatorV1Enum;
