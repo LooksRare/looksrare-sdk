@@ -7,7 +7,7 @@ export enum SupportedChainId {
 /**
  * https://github.com/LooksRare/contracts-exchange-v1/blob/master/contracts/orderValidation/ValidationCodeConstants.sol
  */
-export enum OrderValidatorV1Enum {
+export enum OrderValidatorEnum {
   ORDER_EXPECTED_TO_BE_VALID = 0,
   NONCE_EXECUTED_OR_CANCELLED = 101,
   NONCE_BELOW_MIN_ORDER_NONCE = 102,
@@ -40,4 +40,4 @@ export enum OrderValidatorV1Enum {
   ERC1155_NO_APPROVAL_FOR_ALL = 734,
 }
 
-export type OrderValidatorV1Status = keyof typeof OrderValidatorV1Enum;
+export type OrderValidatorStatus = keyof typeof OrderValidatorEnum;
