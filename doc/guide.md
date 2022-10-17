@@ -56,7 +56,7 @@ const signature = await signer._signTypedData(domain, type, value);
 
 ## How to retrieve the user nonce
 
-Call the public api endpoint [/orders/nonce](https://looksrare.github.io/api-docs/#/Orders/OrderController.getOrderNonce), and use this nonce directly.
+Call the public api endpoint [/orders/nonce](https://looksrare.dev/reference/getordernonce), and use this nonce directly.
 
 ## How to retrieve the fees
 
@@ -74,7 +74,7 @@ const [setter, receiver, fee]: [string, string, BigNumber] = await contract.roya
 
 ## What to do when the order is created and signed ?
 
-Use the public api endpoints [/orders](https://looksrare.github.io/api-docs/#/Orders/OrderController.createOrder) to push the order to the database. After that, the order will be visible by everyone using the API (looksrare.org, aggregators, etc..).
+Use the public api endpoints [/orders](https://looksrare.dev/reference/createorder) to push the order to the database. After that, the order will be visible by everyone using the API (looksrare.org, aggregators, etc..).
 
 ## How to execute an order
 
