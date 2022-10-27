@@ -1,6 +1,6 @@
 {
   "name": "@looksrare/sdk",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
