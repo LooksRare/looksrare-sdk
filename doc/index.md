@@ -15,5 +15,5 @@
 ## Useful links
 
 - [Developer documentation](https://docs.looksrare.org/developers/welcome)
-- [Public API documentation](https://looksrare.github.io/api-docs)
-- [Developer discord](https://discord.gg/jJA4qM5dXz)
+- [Public API documentation](https://looksrare.dev)
+- [Developer discord](https://discord.gg/LooksRareDevelopers)
