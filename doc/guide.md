@@ -4,7 +4,7 @@
 
 The `signMakerOrder` function is a helper used on LooksRare to trigger an EIP-712 signature on our supported wallets.
 
-`ethersProvider` is just a placeholder, for more details on how to get a provider from a wallet checkout this guide [Ethers - Web3Provider](https://docs.ethers.io/v5/getting-started/#getting-started--connecting)
+`ethersProvider` is just a placeholder, for more details on how to get a provider from a wallet check out this guide [Ethers - Web3Provider](https://docs.ethers.io/v5/getting-started/#getting-started--connecting)
 
 ```ts
 import { BigNumber } from "ethers";
@@ -68,7 +68,7 @@ Call the public api endpoint [/orders/nonce](https://looksrare.dev/reference/get
 
 - **Protocol fees**: Call the view function [viewProtocolFee](https://github.com/LooksRare/looksrare-sdk/blob/master/src/abis/IExecutionStrategy.json#L300) on the strategy contract.
 
-To find out more on how to create a contract object checkout this guide [Ethers - Contracts](https://docs.ethers.io/v5/getting-started/#getting-started--contracts)
+To find out more on how to create a contract object check out this guide [Ethers - Contracts](https://docs.ethers.io/v5/getting-started/#getting-started--contracts)
 
 ```ts
 const protocolFee: BigNumber = await contract.viewProtocolFee();
