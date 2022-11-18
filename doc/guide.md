@@ -103,15 +103,40 @@ The API provides you with a MakerOrderWithVRS-like object. The contract expects 
 First you need to convert the object returned by the API to a valid `MakerOrderWithVRS`. For example, the API returned object has the properties `collectionAddress` and `currencyAddress` while the contract expects the properties `collection` and `currency`.
 
 Once you have a valid `MakerOrderWithVRS` object, you'll need a `TakerOrder` as show below.
+
+In the following example a MakerAsk is matched with a TakerBid by calling the function `matchAskWithTakerBid` in the LooksRare Exchange.
+
+The `makerOrder` object in the example below is just a placeholder for the MakerOrder object returned by the API.
+
 ```ts
+import { LooksRareExchangeAbi, addressesByNetwork, SupportedChainId, encodeOrderParams } from "@looksrare/sdk";
+import { ethers } from "ethers";
+
+const chainId = SupportedChainId.MAINNET;
+const addresses = addressesByNetwork[chainId];
+
+const provider = new ethers.providers.JsonRpcProvider(JSON_RPC_PROVIDER_URL);
+const signer = new ethers.Wallet(WALLET_PRIVATE_KEY).connect(provider);
+const signerAddress = await signer.getAddress();
+
+const { encodedParams } = encodeOrderParams(makerOrder.params);
+
+makerOrder.collection = makerOrder.collectionAddress;
+makerOrder.currency = makerOrder.currencyAddress;
+makerOrder.params = encodedParams;
+
 const takerOrder: TakerOrder = {
   isOrderAsk: false,
-  taker: takerAddress, // The address which will send the transaction on-chain
+  taker: signerAddress,
   price: makerOrder.price,
   tokenId: makerOrder.tokenId,
   minPercentageToAsk: 7500,
   params: encodedParams,
 };
+
+const exchangeInterface = new ethers.utils.Interface(LooksRareExchangeAbi);
+const exchangeContract = new ethers.Contract(addresses.EXCHANGE, exchangeInterface, signer);
+await exchangeContract.functions.matchAskWithTakerBid(takerOrder, makerOrder);
 ```
 
 Orders matching functions: 
