@@ -13,6 +13,7 @@ export interface ChainInfo {
 export interface Addresses {
   LOOKS: string;
   LOOKS_LP: string;
+  LOOKS_LP_UNIV3: string;
   WETH: string;
   ROYALTY_FEE_MANAGER: string;
   ROYALTY_FEE_REGISTRY: string;
