@@ -27,7 +27,7 @@ const makerOrder: MakerOrder = {
   tokenId,
   // Amount of tokens to sell/purchase (must be 1 for ERC721, 1+ for ERC1155)
   amount,
-  // Strategy for trade execution (e.g., DutchAuction, StandardSaleForFixedPrice), see addresses in the SDK
+  // Strategy for trade execution (e.g., StandardSaleForFixedPrice), see addresses in the SDK
   strategy,
   // Currency address (WETH)
   currency,
