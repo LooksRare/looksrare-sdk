@@ -3,6 +3,7 @@ export interface ChainInfo {
   appUrl: string;
   rpcUrl: string;
   explorer: string;
+  baseApiUrl: string;
   apiUrl: string;
   osApiUrl: string;
   cdnUrl: string;
