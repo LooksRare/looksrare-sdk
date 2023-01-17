@@ -40,11 +40,9 @@ export const multicall = async <T extends any[]>(
   // will include all values positionally and if the ABI
   // included names, values will additionally be available
   // by their name.
-  const results: T = returnData.map((data: BytesLike, i: number) => {
-    const [result] = itf.decodeFunctionResult(calls[i].functionName, data);
-
-    return result;
-  });
+  const results: T = returnData.map((data: BytesLike, i: number) =>
+    itf.decodeFunctionResult(calls[i].functionName, data)
+  );
 
   return results;
 };
