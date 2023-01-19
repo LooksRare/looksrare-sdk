@@ -12,8 +12,8 @@ export default {
   plugins: [
     copy({
       targets: [
-        { src: "src/abis/**/*.json", dest: "dist/abis" },
-        { src: "src/abis/ts/*.ts", dest: "dist/abis/ts" },
+        { src: "src/abis/json/**/*", dest: "dist/abis/json" },
+        { src: "src/abis/ts/**/*", dest: "dist/abis/ts" },
       ],
     }),
     json(),
