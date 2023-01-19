@@ -6,8 +6,29 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "/dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.cjs.js"
+    },
+    "./abis/json": {
+      "types": "./dist/abis/json/index.d.ts",
+      "default": "./dist/abis/json/index.ts"
+    },
+    "./abis/ts": {
+      "types": "./dist/abis/ts/index.d.ts",
+      "default": "./dist/abis/ts/index.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["dist/index.d.ts"],
+      "abis/json": ["dist/abis/json/index.d.ts"],
+      "abis/ts": ["dist/abis/ts/index.d.ts"]
+    }
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
