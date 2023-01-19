@@ -10,16 +10,15 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.cjs.js"
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js"
     },
     "./abis/json": {
-      "types": "./dist/abis/json/index.d.ts",
       "default": "./dist/abis/json/index.ts"
     },
     "./abis/ts": {
-      "types": "./dist/abis/ts/index.d.ts",
-      "default": "./dist/abis/ts/index.ts"
+      "module": "./dist/abis/ts/index.esm.js",
+      "require": "./dist/abis/ts/index.cjs.js"
     }
   },
   "typesVersions": {
