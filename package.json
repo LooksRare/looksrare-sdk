@@ -24,9 +24,15 @@
   },
   "typesVersions": {
     "*": {
-      "*": ["dist/index.d.ts"],
-      "abis/json": ["dist/abis/json/index.d.ts"],
-      "abis/ts": ["dist/abis/ts/index.d.ts"]
+      "*": [
+        "dist/index.d.ts"
+      ],
+      "abis/json": [
+        "dist/abis/json/index.d.ts"
+      ],
+      "abis/ts": [
+        "dist/abis/ts/index.d.ts"
+      ]
     }
   },
   "publishConfig": {

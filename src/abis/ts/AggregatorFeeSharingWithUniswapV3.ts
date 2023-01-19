@@ -1,4 +1,4 @@
-export default [
+export const AggregatorFeeSharingWithUniswapV3Abi = [
   {
     inputs: [
       {

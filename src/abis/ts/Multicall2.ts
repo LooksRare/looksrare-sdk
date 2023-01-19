@@ -1,4 +1,4 @@
-export default [
+export const Multicall2Abi = [
   {
     inputs: [
       {

@@ -1,4 +1,4 @@
-export default [
+export const OrderValidatorV1Abi = [
   {
     inputs: [
       {
