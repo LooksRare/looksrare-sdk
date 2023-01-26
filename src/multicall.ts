@@ -1,7 +1,7 @@
 import { BytesLike, providers } from "ethers";
 import { Interface } from "@ethersproject/abi";
 import { Contract } from "@ethersproject/contracts";
-import multicall2Abi from "./abis/json/Multicall2.json";
+import { Multicall2Abi } from "./abis/ts";
 
 export interface Call {
   contractAddress: string;
@@ -24,7 +24,7 @@ export const multicall = async <T extends any[]>(
   calls: Call[]
 ): Promise<T> => {
   // Setup contracts
-  const multicallContract = new Contract(address, multicall2Abi, provider);
+  const multicallContract = new Contract(address, Multicall2Abi, provider);
   const itf = new Interface(abi);
 
   const calldata = calls.map((call) => [
