@@ -1,7 +1,7 @@
 import { BytesLike, providers } from "ethers";
 import { Interface } from "@ethersproject/abi";
 import { Contract } from "@ethersproject/contracts";
-import multicall2Abi from "./abis/Multicall2.json";
+import multicall2Abi from "./abis/json/Multicall2.json";
 
 export interface Call {
   contractAddress: string;
