@@ -10,20 +10,20 @@ export default [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" },
     ],
-    plugins: [
-      copy({
-        targets: [{ src: "src/abis/json/**/*", dest: "dist/abis/json" }],
-      }),
-      json(),
-      typescript(),
-    ],
+    plugins: [typescript()],
   },
   {
     input: "src/abis/ts/index.ts",
     output: [
-      { file: "dist/abis/ts/index.esm.js", format: "es" },
-      { file: "dist/abis/ts/index.cjs.js", format: "cjs" },
+      { file: "dist/abis/index.esm.js", format: "es" },
+      { file: "dist/abis/index.cjs.js", format: "cjs" },
     ],
-    plugins: [typescript()],
+    plugins: [
+      copy({
+        targets: [{ src: "src/abis/json/**/*.json", dest: "dist" }],
+      }),
+      json(),
+      typescript(),
+    ],
   },
 ];

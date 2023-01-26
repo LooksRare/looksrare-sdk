@@ -13,12 +13,9 @@
       "require": "./dist/index.cjs.js",
       "import": "./dist/index.esm.js"
     },
-    "./abis/json": {
-      "default": "./dist/abis/json/index.ts"
-    },
-    "./abis/ts": {
-      "module": "./dist/abis/ts/index.esm.js",
-      "require": "./dist/abis/ts/index.cjs.js"
+    "./abis": {
+      "module": "./dist/abis/index.esm.js",
+      "require": "./dist/abis/index.cjs.js"
     }
   },
   "typesVersions": {
@@ -26,10 +23,7 @@
       "*": [
         "dist/index.d.ts"
       ],
-      "abis/json": [
-        "dist/abis/json/index.d.ts"
-      ],
-      "abis/ts": [
+      "abis": [
         "dist/abis/ts/index.d.ts"
       ]
     }
