@@ -20,7 +20,7 @@ export interface Call {
 export const multicall = async <T extends any[]>(
   provider: providers.Provider,
   address: string,
-  abi: any[],
+  abi: any,
   calls: Call[]
 ): Promise<T> => {
   // Setup contracts
