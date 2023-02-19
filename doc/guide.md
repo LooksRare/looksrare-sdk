@@ -94,7 +94,7 @@ const [setter, receiver, fee]: [string, string, BigNumber] = await contract.roya
 
 ## What to do when the order is created and signed
 
-Use the Public API endpoint [/orders](https://looksrare.dev/reference/createorder) to push the order to the database. After that, the order will be visible to everyone using the our APIs (looksrare.org, aggregators, etc..).
+Use the Public API endpoint [/orders](https://looksrare.dev/reference/createorder) to push the order to the database. After that, the order will be visible to everyone using our APIs (looksrare.org, aggregators, etc..).
 
 ## How to execute an order
 
@@ -102,7 +102,7 @@ The API provides you with a MakerOrderWithVRS-like object. The contract expects 
 
 First you need to convert the object returned by the API to a valid `MakerOrderWithVRS`. For example, the API returned object has the properties `collectionAddress` and `currencyAddress` while the contract expects the properties `collection` and `currency`.
 
-Once you have a valid `MakerOrderWithVRS` object, you'll need a `TakerOrder` as show below.
+Once you have a valid `MakerOrderWithVRS` object, you'll need a `TakerOrder` as shown below.
 
 In the following example a MakerAsk is matched with a TakerBid by calling the function `matchAskWithTakerBid` in the LooksRare Exchange.
 
